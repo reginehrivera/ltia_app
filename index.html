@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LTIA — Lupong Tagapamayapa Incentives & Awards</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app" id="app">
+  <div class="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-badge">LTIA</div>
+      <div class="logo-title">Lupong Tagapamayapa</div>
+      <div class="logo-sub">Incentives & Awards</div>
+    </div>
+    <div class="nav" id="nav"></div>
+  </div>
+  <div class="main">
+    <div class="global-topbar">
+      <div class="global-search-wrap">
+        <span class="global-s-icon">🔍</span>
+        <input type="text" id="global-search-input" placeholder="Search complaints..." oninput="setGlobalSearch(this.value)">
+        <button id="global-search-clear" onclick="clearGlobalSearch()" title="Clear search" style="display:none;position:absolute;right:8px;top:50%;transform:translateY(-50%);border:none;background:none;cursor:pointer;color:#9ba3ae;font-size:16px;line-height:1;padding:0 2px;border-radius:4px" onmouseover="this.style.color='#333'" onmouseout="this.style.color='#9ba3ae'">×</button>
+      </div>
+      <button class="btn-new-complaint-top" onclick="openArchiveModal()">＋ Log Old Case</button>
+    </div>
+    <div class="content" id="content"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
